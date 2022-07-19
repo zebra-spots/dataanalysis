@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/python
 """
 This web scraper works on static HTML job sites
 and will look for and print all python jobs.
