@@ -1,6 +1,6 @@
 #!/bin/bash
 """
-This web scraper works pn static HTML job sites
+This web scraper works on static HTML job sites
 and will look for and print all python jobs.
 
 Requires the following dependents:
