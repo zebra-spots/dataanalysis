@@ -1,5 +1,5 @@
 #! /usr/bin/python
-# Name: webscrape.py
+# Name: webscrapeproject.py
 # Author: Chris
 # Revision v1.0
 # Description: This web scraper works on static HTML job sites
@@ -19,7 +19,22 @@ from bs4 import BeautifulSoup
 def main():
     """ main program overview """
     
-    # Main program in here
+    # Variables
+    URL = "https://remote.co/remote-jobs/developer/"
+    page = requests.get(URL)
+    #print(page.text) # Test request
+
+    soup = BeautifulSoup(page.content, "html.parser")
+    #print(soup.prettify()) # Test soup
+
+    #Can't figure how to get the correct div
+    results = soup.div.div.div.div
+    print(results)
+
+    # class="job-Types"?
+
+    # job name: class="m-0"
+    # Company name: class="m-0 text-secondary"
 
     
     return None
