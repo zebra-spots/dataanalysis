@@ -44,9 +44,22 @@ def main():
     #print(content)
 
     s1 = soup.find('div', id='mosaic-zone-jobcards')
-    print(s1)
+    #print(s1.prettify())
 
 
+    job_elements = s1.find("div", class_="mosaic mosaic-provider-jobcards")
+    print(job_elements.prettify())
+    print("~~~~~~~~~~~~~~~~~~~")
+    
+    # Trim down results
+    for job_element in job_elements:
+        title_element = job_element.find("h2", class_="jobTitle")
+        company_element = job_element.find("span", class_="companyName")
+        location_element = job_element.find("div", class_="companyLocation")
+        print(title_element) #.text.strip()
+        print(company_element)
+        print(location_element)
+        print()
 
 
     
